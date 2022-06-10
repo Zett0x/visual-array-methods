@@ -1,5 +1,6 @@
 const itemsElement=document.getElementById("items");
 const addAtElement=document.getElementById("addAt");
+const removeAtElement=document.getElementById("removeAt");
 
 // DATA
 const data=["👆","👾","🖨","🚢","🍫","🎨","🧶","🎭","🎗","🎁","🧨","👨‍🦰","👮‍♀️","👮‍♂️","👼","🛴","🚄","🚜","🚈","🚅","🚄","👨‍🦳","👱‍♂️","🍱","🥛","🍓","🌯","😍","🌯"];
@@ -23,7 +24,13 @@ const unshiftRandomEl=()=>{
 }
 
 const insertRandomEl=()=>{
-    let index=addAtElement.value;
+    let index=+addAtElement.value;
+  
+    if(index>arr.length-1)
+    index=arr.length;
+
+    console.log(index);
+
     let randomElement=data[generateRandomNumber(0,arr.length-1)];
     arr.splice(index,0,randomElement)
     loadItems();
@@ -40,8 +47,10 @@ const shiftElement=()=>{
     loadItems();
 }
 const removeElAt=()=>{
-    let index=addAtElement.value;
-    console.log(index);
+    let index=+removeAtElement.value;
+    if(index>arr.length-1)
+    index=arr.length-1;
+
     arr.splice(index,1);
     loadItems();
 }
