@@ -12,18 +12,18 @@
     <div id="content">
         <p>Add Item</p>
         <div class="container">           
-            <button class="button" onclick="push()">push</button>
-            <button class="button">unshift</button>
-            <button class="button">insert at</button>
-            <input id="add" type="number" value="1"/>
+            <button class="button" onclick="pushRandomEl()">push</button>
+            <button class="button" onclick="unshiftRandomEl()">unshift</button>
+            <button class="button" onclick="insertRandomEl()">insert at</button>
+            <input id="addAt" type="number" value="1"/>
         </div>
 
         <p>Remove Item</p>
         <div class="container">
-            <button class="button">pop</button>
-            <button class="button">shift</button>
-            <button class="button">remove at</button>
-            <input id="remove" type="number" value="1"/>
+            <button class="button" onclick="popElement()">pop</button>
+            <button class="button" onclick="shiftElement()">shift</button>
+            <button class="button" onclick="removeElAt()">remove at</button>
+            <input id="removeAt" type="number" value="1"/>
         </div>
 
         <div id="items">[]</div>
